@@ -10,6 +10,11 @@ namespace LeetCode_231_Power_of_Two
         public void n_is_less_or_equal_0_should_return_false()
         {
             var n = 0;
+            ShouldBeFalse(n);
+        }
+
+        private static void ShouldBeFalse(int n)
+        {
             Assert.IsFalse(new Solution().IsPowerOfTwo(n));
         }
     }
