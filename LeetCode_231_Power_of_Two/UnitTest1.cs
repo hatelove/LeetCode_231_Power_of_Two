@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 
 namespace LeetCode_231_Power_of_Two
 {
@@ -9,15 +8,19 @@ namespace LeetCode_231_Power_of_Two
         [TestMethod]
         public void n_is_less_or_equal_0_should_return_false()
         {
-            var n = 0;
-            ShouldBeFalse(n);
+            ShouldBeFalse(0);
         }
 
         [TestMethod]
         public void n_is_1_should_return_true()
         {
-            var n = 1;
-            ShouldBeTrue(n);
+            ShouldBeTrue(1);
+        }
+
+        [TestMethod]
+        public void n_is_2_should_return_true()
+        {
+            ShouldBeTrue(2);
         }
 
         private static void ShouldBeTrue(int n)
@@ -41,8 +44,8 @@ namespace LeetCode_231_Power_of_Two
             {
                 return true;
             }
-            
-            throw new NotImplementedException();
+
+            return n % 2 == 0;
         }
     }
 }
