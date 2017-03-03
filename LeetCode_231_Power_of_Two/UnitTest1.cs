@@ -10,45 +10,45 @@ namespace LeetCode_231_Power_of_Two
         [TestMethod]
         public void n_is_less_or_equal_0_should_return_false()
         {
-            ShouldBeFalse(0);
+            IsNotPowerOfTwo(0);
         }
 
         [TestMethod]
         public void n_is_1_should_return_true()
         {
-            ShouldBeTrue(1);
+            IsPowerOfTwo(1);
         }
 
         [TestMethod]
         public void n_is_2_should_return_true()
         {
-            ShouldBeTrue(2);
+            IsPowerOfTwo(2);
         }
 
         [TestMethod]
         public void n_is_6_should_be_false()
         {
-            ShouldBeFalse(6);
+            IsNotPowerOfTwo(6);
         }
 
         [TestMethod]
         public void n_is_12_should_be_false()
         {
-            ShouldBeFalse(12);
+            IsNotPowerOfTwo(12);
         }
 
         [TestMethod]
         public void n_is_1024_should_be_true()
         {
-            ShouldBeTrue(1024);
+            IsPowerOfTwo(1024);
         }
 
-        private static void ShouldBeTrue(int n)
+        private static void IsPowerOfTwo(int n)
         {
             Assert.IsTrue(new Solution().IsPowerOfTwo(n));
         }
 
-        private static void ShouldBeFalse(int n)
+        private static void IsNotPowerOfTwo(int n)
         {
             Assert.IsFalse(new Solution().IsPowerOfTwo(n));
         }
