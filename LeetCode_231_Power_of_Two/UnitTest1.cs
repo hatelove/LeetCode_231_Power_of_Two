@@ -48,11 +48,6 @@ namespace LeetCode_231_Power_of_Two
         {
             if (n <= 0) return false;
 
-            if (n == 1)
-            {
-                return true;
-            }
-
             var charArray = Convert.ToString(n, 2).ToCharArray();
             return charArray.Count(x => x == '1') == 1;
         }
