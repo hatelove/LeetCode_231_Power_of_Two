@@ -23,6 +23,12 @@ namespace LeetCode_231_Power_of_Two
             ShouldBeTrue(2);
         }
 
+        [TestMethod]
+        public void n_is_6_should_be_false()
+        {
+            ShouldBeFalse(6);
+        }
+
         private static void ShouldBeTrue(int n)
         {
             Assert.IsTrue(new Solution().IsPowerOfTwo(n));
