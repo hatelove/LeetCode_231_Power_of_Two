@@ -17,6 +17,11 @@ namespace LeetCode_231_Power_of_Two
         public void n_is_1_should_return_true()
         {
             var n = 1;
+            ShouldBeTrue(n);
+        }
+
+        private static void ShouldBeTrue(int n)
+        {
             Assert.IsTrue(new Solution().IsPowerOfTwo(n));
         }
 
@@ -36,7 +41,7 @@ namespace LeetCode_231_Power_of_Two
             {
                 return true;
             }
-
+            
             throw new NotImplementedException();
         }
     }
