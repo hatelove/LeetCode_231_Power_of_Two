@@ -1,4 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+using System.Linq;
 
 namespace LeetCode_231_Power_of_Two
 {
@@ -51,7 +53,8 @@ namespace LeetCode_231_Power_of_Two
                 return true;
             }
 
-            return n % 2 == 0;
+            var charArray = Convert.ToString(n, 2).ToCharArray();
+            return charArray.Count(x => x == '1') == 1;
         }
     }
 }
